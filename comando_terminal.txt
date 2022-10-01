@@ -1,0 +1,3 @@
+pan -file:transformada_01_Intento02.ktr
+
+pan -file:transformada_02_intento01.ktr
