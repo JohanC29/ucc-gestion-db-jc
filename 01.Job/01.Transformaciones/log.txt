@@ -1,0 +1,42 @@
+DEBUG: Using JAVA_HOME
+DEBUG: _PENTAHO_JAVA_HOME=D:\app\jdk-11
+DEBUG: _PENTAHO_JAVA=D:\app\jdk-11\bin\java.exe
+
+D:\app\data-integration>"D:\app\jdk-11\bin\java.exe" --add-opens java.base/java.net=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/sun.net.www.protocol.jar=ALL-UNNAMED  "-Xms1024m" "-Xmx2048m" "-Djava.library.path=libswt\win64;/bin"  -Djava.locale.providers=COMPAT,SPI "-DKETTLE_HOME=" "-DKETTLE_REPOSITORY=" "-DKETTLE_USER=" "-DKETTLE_PASSWORD=" "-DKETTLE_PLUGIN_PACKAGES=" "-DKETTLE_LOG_SIZE_LIMIT=" "-DKETTLE_JNDI_ROOT=" -jar launcher\launcher.jar -lib ..\libswt\win64  -main org.pentaho.di.pan.Pan -initialDir "D:\LocalD_JC\07.GestionBaseDatos\01.Clase28092022\01.Job\01.Transformaciones"\ -file:transformada_02.ktr 
+20:01:39,035 INFO  [KarafBoot] Checking to see if org.pentaho.clean.karaf.cache is enabled
+20:01:45,190 INFO  [KarafInstance] 
+*******************************************************************************
+*** Karaf Instance Number: 2 at D:\app\data-integration\.\system\karaf\cach ***
+***   es\pan\data-1                                                         ***
+*** Karaf Port:8803                                                         ***
+*** OSGI Service Port:9052                                                  ***
+*******************************************************************************
+20:01:49,299 INFO  [DriverManager] Installing driver kars.
+20:01:49,300 INFO  [DriverManager] 0 drivers will be installed.
+20:01:49,301 INFO  [DriverManager] Finished installing drivers kars.
+2022/10/12 20:01:52 - Pan - Start of run.
+2022/10/12 20:01:52 - transformada_02 - Dispatching started for transformation [transformada_02]
+2022/10/12 20:01:52 - Get file names.0 - Finished processing (I=0, O=0, R=0, W=1, U=0, E=0)
+2022/10/12 20:01:52 - 07_MOCK_DATA.0 - Header row skipped in file 'file:///D:/LocalD_JC/07.GestionBaseDatos/01.Clase28092022/01.Job/01.Transformaciones\02.ArchivosActividad02\07_MOCK_DATA.csv'
+2022/10/12 20:01:52 - 08_MOCK_DATA.0 - Header row skipped in file 'file:///D:/LocalD_JC/07.GestionBaseDatos/01.Clase28092022/01.Job/01.Transformaciones\02.ArchivosActividad02\08_MOCK_DATA.csv'
+2022/10/12 20:01:52 - 09_MOCK_DATA.0 - Header row skipped in file 'file:///D:/LocalD_JC/07.GestionBaseDatos/01.Clase28092022/01.Job/01.Transformaciones\02.ArchivosActividad02\09_MOCK_DATA.csv'
+2022/10/12 20:01:52 - Add constants.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2022/10/12 20:01:52 - 07_MOCK_DATA.0 - Finished processing (I=1001, O=0, R=0, W=1000, U=0, E=0)
+2022/10/12 20:01:52 - 09_MOCK_DATA.0 - Finished processing (I=1001, O=0, R=0, W=1000, U=0, E=0)
+2022/10/12 20:01:52 - 08_MOCK_DATA.0 - Finished processing (I=1001, O=0, R=0, W=1000, U=0, E=0)
+2022/10/12 20:01:52 - Zip file.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2022/10/12 20:01:52 - archivoPaso02.0 - Finished processing (I=0, O=2000, R=2000, W=2000, U=0, E=0)
+2022/10/12 20:01:52 - archivoSalida02.0 - Finished processing (I=0, O=3000, R=3000, W=3000, U=0, E=0)
+2022/10/12 20:01:52 - Carte - Installing timer to purge stale objects after 1440 minutes.
+2022/10/12 20:01:52 - Pan - Finished!
+2022/10/12 20:01:52 - Pan - Start=2022/10/12 20:01:52.632, Stop=2022/10/12 20:01:52.923
+2022/10/12 20:01:52 - Pan - Processing ended after 0 seconds.
+2022/10/12 20:01:52 - transformada_02 -  
+2022/10/12 20:01:52 - transformada_02 - Step 07_MOCK_DATA.0 ended successfully, processed 1000 lines. ( - lines/s)
+2022/10/12 20:01:52 - transformada_02 - Step archivoPaso02.0 ended successfully, processed 2000 lines. ( - lines/s)
+2022/10/12 20:01:52 - transformada_02 - Step 08_MOCK_DATA.0 ended successfully, processed 1000 lines. ( - lines/s)
+2022/10/12 20:01:52 - transformada_02 - Step archivoSalida02.0 ended successfully, processed 3000 lines. ( - lines/s)
+2022/10/12 20:01:52 - transformada_02 - Step 09_MOCK_DATA.0 ended successfully, processed 1000 lines. ( - lines/s)
+2022/10/12 20:01:52 - transformada_02 - Step Get file names.0 ended successfully, processed 1 lines. ( - lines/s)
+2022/10/12 20:01:52 - transformada_02 - Step Add constants.0 ended successfully, processed 1 lines. ( - lines/s)
+2022/10/12 20:01:52 - transformada_02 - Step Zip file.0 ended successfully, processed 1 lines. ( - lines/s)
