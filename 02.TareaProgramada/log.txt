@@ -1,0 +1,113 @@
+DEBUG: Using JAVA_HOME
+DEBUG: _PENTAHO_JAVA_HOME=D:\app\jdk-11
+DEBUG: _PENTAHO_JAVA=D:\app\jdk-11\bin\java.exe
+
+D:\app\data-integration>"D:\app\jdk-11\bin\java.exe" --add-opens java.base/java.net=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/sun.net.www.protocol.jar=ALL-UNNAMED  "-Xms1024m" "-Xmx2048m" "-Djava.library.path=libswt\win64;/bin"  -Djava.locale.providers=COMPAT,SPI "-DKETTLE_HOME=" "-DKETTLE_REPOSITORY=" "-DKETTLE_USER=" "-DKETTLE_PASSWORD=" "-DKETTLE_PLUGIN_PACKAGES=" "-DKETTLE_LOG_SIZE_LIMIT=" "-DKETTLE_JNDI_ROOT=" -jar launcher\launcher.jar -lib ..\libswt\win64  -main org.pentaho.di.kitchen.Kitchen -initialDir "D:\LocalD_JC\07.GestionBaseDatos\01.Clase28092022\02.TareaProgramada"\ -file:01jobInicial.kjb 
+20:29:13,553 INFO  [KarafBoot] Checking to see if org.pentaho.clean.karaf.cache is enabled
+20:29:19,770 INFO  [KarafInstance] 
+*******************************************************************************
+*** Karaf Instance Number: 2 at D:\app\data-integration\.\system\karaf\cach ***
+***   es\kitchen\data-1                                                     ***
+*** Karaf Port:8803                                                         ***
+*** OSGI Service Port:9052                                                  ***
+*******************************************************************************
+2022/10/13 20:29:30 - Kitchen - Start of run.
+20:29:36,076 INFO  [DriverManager] Installing driver kars.
+20:29:36,078 INFO  [DriverManager] 0 drivers will be installed.
+20:29:36,079 INFO  [DriverManager] Finished installing drivers kars.
+2022/10/13 20:29:38 - 01jobInicial - Start of job execution
+2022/10/13 20:29:38 - 01jobInicial - Starting entry [Transformation]
+2022/10/13 20:29:38 - Transformation - Using run configuration [Pentaho local]
+2022/10/13 20:29:38 - Transformation - Running transformation using the Kettle execution engine
+2022/10/13 20:29:38 - transformada_02 - Dispatching started for transformation [transformada_02]
+2022/10/13 20:29:38 - 07_MOCK_DATA.0 - Header row skipped in file 'file:///D:/LocalD_JC/07.GestionBaseDatos/01.Clase28092022/02.TareaProgramada\02.ArchivosActividad02\07_MOCK_DATA.csv'
+2022/10/13 20:29:38 - 08_MOCK_DATA.0 - Header row skipped in file 'file:///D:/LocalD_JC/07.GestionBaseDatos/01.Clase28092022/02.TareaProgramada\02.ArchivosActividad02\08_MOCK_DATA.csv'
+2022/10/13 20:29:38 - 09_MOCK_DATA.0 - Header row skipped in file 'file:///D:/LocalD_JC/07.GestionBaseDatos/01.Clase28092022/02.TareaProgramada\02.ArchivosActividad02\09_MOCK_DATA.csv'
+2022/10/13 20:29:38 - 08_MOCK_DATA.0 - Finished processing (I=1001, O=0, R=0, W=1000, U=0, E=0)
+2022/10/13 20:29:38 - 09_MOCK_DATA.0 - Finished processing (I=1001, O=0, R=0, W=1000, U=0, E=0)
+2022/10/13 20:29:38 - 07_MOCK_DATA.0 - Finished processing (I=1001, O=0, R=0, W=1000, U=0, E=0)
+2022/10/13 20:29:38 - archivoPaso02.0 - Finished processing (I=0, O=2000, R=2000, W=2000, U=0, E=0)
+2022/10/13 20:29:38 - archivoSalida02.0 - Finished processing (I=0, O=3000, R=3000, W=3000, U=0, E=0)
+2022/10/13 20:29:38 - Carte - Installing timer to purge stale objects after 1440 minutes.
+2022/10/13 20:29:38 - 01jobInicial - Starting entry [Job]
+2022/10/13 20:29:38 - Job - Using run configuration [Pentaho local]
+2022/10/13 20:29:38 - job_paralelo - Starting entry [transformada_01]
+2022/10/13 20:29:38 - transformada_01 - Using run configuration [Pentaho local]
+2022/10/13 20:29:38 - transformada_01 - Running transformation using the Kettle execution engine
+2022/10/13 20:29:38 - transformada_01 - Dispatching started for transformation [transformada_01]
+2022/10/13 20:29:38 - actividad01.0 - Connected to database [dockerPostgres] (commit=1000)
+2022/10/13 20:29:38 - 01_MOCK_DATA.0 - Header row skipped in file 'file:///D:/LocalD_JC/07.GestionBaseDatos/01.Clase28092022/02.TareaProgramada/01.Transformaciones\01.ArchivosActividad01\01_MOCK_DATA.csv'
+2022/10/13 20:29:38 - 03_MOCK_DATA.0 - Header row skipped in file 'file:///D:/LocalD_JC/07.GestionBaseDatos/01.Clase28092022/02.TareaProgramada/01.Transformaciones\01.ArchivosActividad01\03_MOCK_DATA.csv'
+2022/10/13 20:29:38 - 02_MOCK_DATA.0 - Header row skipped in file 'file:///D:/LocalD_JC/07.GestionBaseDatos/01.Clase28092022/02.TareaProgramada/01.Transformaciones\01.ArchivosActividad01\02_MOCK_DATA.csv'
+2022/10/13 20:29:38 - 04_MOCK_DATA.0 - Header row skipped in file 'file:///D:/LocalD_JC/07.GestionBaseDatos/01.Clase28092022/02.TareaProgramada/01.Transformaciones\01.ArchivosActividad01\04_MOCK_DATA.csv'
+2022/10/13 20:29:38 - 06_MOCK_DATA.0 - Header row skipped in file 'file:///D:/LocalD_JC/07.GestionBaseDatos/01.Clase28092022/02.TareaProgramada/01.Transformaciones\01.ArchivosActividad01\06_MOCK_DATA.csv'
+2022/10/13 20:29:38 - 05_MOCK_DATA.0 - Header row skipped in file 'file:///D:/LocalD_JC/07.GestionBaseDatos/01.Clase28092022/02.TareaProgramada/01.Transformaciones\01.ArchivosActividad01\05_MOCK_DATA.csv'
+2022/10/13 20:29:38 - 05_MOCK_DATA.0 - Finished processing (I=1001, O=0, R=0, W=1000, U=0, E=0)
+2022/10/13 20:29:38 - 06_MOCK_DATA.0 - Finished processing (I=1001, O=0, R=0, W=1000, U=0, E=0)
+2022/10/13 20:29:38 - 03_MOCK_DATA.0 - Finished processing (I=1001, O=0, R=0, W=1000, U=0, E=0)
+2022/10/13 20:29:38 - 02_MOCK_DATA.0 - Finished processing (I=1001, O=0, R=0, W=1000, U=0, E=0)
+2022/10/13 20:29:38 - 04_MOCK_DATA.0 - Finished processing (I=1001, O=0, R=0, W=1000, U=0, E=0)
+2022/10/13 20:29:38 - 01_MOCK_DATA.0 - Finished processing (I=1001, O=0, R=0, W=1000, U=0, E=0)
+2022/10/13 20:29:38 - archivoSalida.0 - Finished processing (I=0, O=6000, R=6000, W=6000, U=0, E=0)
+2022/10/13 20:29:40 - actividad01.0 - Finished processing (I=0, O=6000, R=6000, W=6000, U=0, E=0)
+2022/10/13 20:29:40 - job_paralelo - Starting entry [transformada_01 2]
+2022/10/13 20:29:40 - transformada_01 2 - Using run configuration [Pentaho local]
+2022/10/13 20:29:40 - transformada_01 2 - Running transformation using the Kettle execution engine
+2022/10/13 20:29:40 - transformada_01 - Dispatching started for transformation [transformada_01]
+2022/10/13 20:29:40 - actividad01.0 - Connected to database [dockerPostgres] (commit=1000)
+2022/10/13 20:29:40 - 02_MOCK_DATA.0 - Header row skipped in file 'file:///D:/LocalD_JC/07.GestionBaseDatos/01.Clase28092022/02.TareaProgramada/01.Transformaciones\01.ArchivosActividad01\02_MOCK_DATA.csv'
+2022/10/13 20:29:40 - 01_MOCK_DATA.0 - Header row skipped in file 'file:///D:/LocalD_JC/07.GestionBaseDatos/01.Clase28092022/02.TareaProgramada/01.Transformaciones\01.ArchivosActividad01\01_MOCK_DATA.csv'
+2022/10/13 20:29:40 - 05_MOCK_DATA.0 - Header row skipped in file 'file:///D:/LocalD_JC/07.GestionBaseDatos/01.Clase28092022/02.TareaProgramada/01.Transformaciones\01.ArchivosActividad01\05_MOCK_DATA.csv'
+2022/10/13 20:29:40 - 03_MOCK_DATA.0 - Header row skipped in file 'file:///D:/LocalD_JC/07.GestionBaseDatos/01.Clase28092022/02.TareaProgramada/01.Transformaciones\01.ArchivosActividad01\03_MOCK_DATA.csv'
+2022/10/13 20:29:40 - 04_MOCK_DATA.0 - Header row skipped in file 'file:///D:/LocalD_JC/07.GestionBaseDatos/01.Clase28092022/02.TareaProgramada/01.Transformaciones\01.ArchivosActividad01\04_MOCK_DATA.csv'
+2022/10/13 20:29:40 - 02_MOCK_DATA.0 - Finished processing (I=1001, O=0, R=0, W=1000, U=0, E=0)
+2022/10/13 20:29:40 - 03_MOCK_DATA.0 - Finished processing (I=1001, O=0, R=0, W=1000, U=0, E=0)
+2022/10/13 20:29:40 - 06_MOCK_DATA.0 - Header row skipped in file 'file:///D:/LocalD_JC/07.GestionBaseDatos/01.Clase28092022/02.TareaProgramada/01.Transformaciones\01.ArchivosActividad01\06_MOCK_DATA.csv'
+2022/10/13 20:29:40 - 05_MOCK_DATA.0 - Finished processing (I=1001, O=0, R=0, W=1000, U=0, E=0)
+2022/10/13 20:29:40 - 04_MOCK_DATA.0 - Finished processing (I=1001, O=0, R=0, W=1000, U=0, E=0)
+2022/10/13 20:29:40 - 06_MOCK_DATA.0 - Finished processing (I=1001, O=0, R=0, W=1000, U=0, E=0)
+2022/10/13 20:29:40 - 01_MOCK_DATA.0 - Finished processing (I=1001, O=0, R=0, W=1000, U=0, E=0)
+2022/10/13 20:29:40 - archivoSalida.0 - Finished processing (I=0, O=6000, R=6000, W=6000, U=0, E=0)
+2022/10/13 20:29:42 - actividad01.0 - Finished processing (I=0, O=6000, R=6000, W=6000, U=0, E=0)
+2022/10/13 20:29:42 - job_paralelo - Starting entry [Job]
+2022/10/13 20:29:42 - Job - Using run configuration [Pentaho local]
+2022/10/13 20:29:42 - 03jobShell - Starting entry [Shell]
+2022/10/13 20:29:42 - Shell - Running on platform : Windows 10
+2022/10/13 20:29:42 - Shell - Executing command : cmd.exe /C "C:\Users\User\AppData\Local\Temp\kettle_adb882e1-4b5f-11ed-bd74-93388b939606shell.bat"
+2022/10/13 20:29:42 - Shell - (stdout) arqbsrepository
+2022/10/13 20:29:42 - Shell - (stdout) 
+2022/10/13 20:29:42 - Shell - (stdout) D:\LocalD_JC\07.GestionBaseDatos\01.Clase28092022\02.TareaProgramada>echo "Hola mundo JohanC"  1>log2.txt 
+2022/10/13 20:29:42 - 03jobShell - Starting entry [Success]
+2022/10/13 20:29:42 - 03jobShell - Finished job entry [Success] (result=[true])
+2022/10/13 20:29:42 - 03jobShell - Finished job entry [Shell] (result=[true])
+2022/10/13 20:29:42 - job_paralelo - Starting entry [Success]
+2022/10/13 20:29:42 - job_paralelo - Finished job entry [Success] (result=[true])
+2022/10/13 20:29:42 - job_paralelo - Finished job entry [Job] (result=[true])
+2022/10/13 20:29:42 - job_paralelo - Finished job entry [transformada_01 2] (result=[true])
+2022/10/13 20:29:42 - job_paralelo - Finished job entry [transformada_01] (result=[true])
+2022/10/13 20:29:42 - job_paralelo - Starting entry [transformada_02.ktr]
+2022/10/13 20:29:42 - transformada_02.ktr - Using run configuration [Pentaho local]
+2022/10/13 20:29:42 - transformada_02.ktr - Running transformation using the Kettle execution engine
+2022/10/13 20:29:42 - transformada_02 - Dispatching started for transformation [transformada_02]
+2022/10/13 20:29:42 - 07_MOCK_DATA.0 - Header row skipped in file 'file:///D:/LocalD_JC/07.GestionBaseDatos/01.Clase28092022/02.TareaProgramada/01.Transformaciones\02.ArchivosActividad02\07_MOCK_DATA.csv'
+2022/10/13 20:29:42 - Get file names.0 - Finished processing (I=0, O=0, R=0, W=1, U=0, E=0)
+2022/10/13 20:29:42 - 08_MOCK_DATA.0 - Header row skipped in file 'file:///D:/LocalD_JC/07.GestionBaseDatos/01.Clase28092022/02.TareaProgramada/01.Transformaciones\02.ArchivosActividad02\08_MOCK_DATA.csv'
+2022/10/13 20:29:42 - 09_MOCK_DATA.0 - Header row skipped in file 'file:///D:/LocalD_JC/07.GestionBaseDatos/01.Clase28092022/02.TareaProgramada/01.Transformaciones\02.ArchivosActividad02\09_MOCK_DATA.csv'
+2022/10/13 20:29:42 - 07_MOCK_DATA.0 - Finished processing (I=1001, O=0, R=0, W=1000, U=0, E=0)
+2022/10/13 20:29:42 - 08_MOCK_DATA.0 - Finished processing (I=1001, O=0, R=0, W=1000, U=0, E=0)
+2022/10/13 20:29:42 - Add constants.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2022/10/13 20:29:42 - 09_MOCK_DATA.0 - Finished processing (I=1001, O=0, R=0, W=1000, U=0, E=0)
+2022/10/13 20:29:42 - archivoPaso02.0 - Finished processing (I=0, O=2000, R=2000, W=2000, U=0, E=0)
+2022/10/13 20:29:42 - archivoSalida02.0 - Finished processing (I=0, O=3000, R=3000, W=3000, U=0, E=0)
+2022/10/13 20:29:42 - Zip file.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2022/10/13 20:29:42 - job_paralelo - Starting entry [Success]
+2022/10/13 20:29:42 - job_paralelo - Finished job entry [Success] (result=[true])
+2022/10/13 20:29:42 - job_paralelo - Finished job entry [transformada_02.ktr] (result=[true])
+2022/10/13 20:29:42 - 01jobInicial - Starting entry [Success]
+2022/10/13 20:29:42 - 01jobInicial - Finished job entry [Success] (result=[true])
+2022/10/13 20:29:42 - 01jobInicial - Finished job entry [Job] (result=[true])
+2022/10/13 20:29:42 - 01jobInicial - Finished job entry [Transformation] (result=[true])
+2022/10/13 20:29:42 - 01jobInicial - Job execution finished
+2022/10/13 20:29:42 - Kitchen - Finished!
+2022/10/13 20:29:42 - Kitchen - Start=2022/10/13 20:29:38.008, Stop=2022/10/13 20:29:42.936
+2022/10/13 20:29:42 - Kitchen - Processing ended after 4 seconds.
