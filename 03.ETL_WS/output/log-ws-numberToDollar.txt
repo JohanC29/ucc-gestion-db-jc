@@ -1,0 +1,10 @@
+2022/10/19 20:59:30 - Spoon - Running transformation using the Kettle execution engine
+2022/10/19 20:59:30 - Spoon - Transformation opened.
+2022/10/19 20:59:30 - Spoon - Launching transformation [Web Service - Number To Dollars]...
+2022/10/19 20:59:30 - Spoon - Started the transformation execution.
+2022/10/19 20:59:30 - Web Service - Number To Dollars - Dispatching started for transformation [Web Service - Number To Dollars]
+2022/10/19 20:59:30 - XML Output.0 - Opening output stream in encoding: UTF-8
+2022/10/19 20:59:30 - Generate Rows.0 - Finished processing (I=0, O=0, R=0, W=1, U=0, E=0)
+2022/10/19 20:59:31 - Get NumberToDollars.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2022/10/19 20:59:31 - XML Output.0 - Finished processing (I=0, O=1, R=1, W=1, U=0, E=0)
+2022/10/19 20:59:31 - Spoon - The transformation has finished!!
