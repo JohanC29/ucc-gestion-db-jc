@@ -1,0 +1,244 @@
+DEBUG: Using JAVA_HOME
+DEBUG: _PENTAHO_JAVA_HOME=C:\Program Files\Java\jdk1.8.0_131
+DEBUG: _PENTAHO_JAVA=C:\Program Files\Java\jdk1.8.0_131\bin\java.exe
+
+E:\app\data-integration>"C:\Program Files\Java\jdk1.8.0_131\bin\java.exe"   "-Xms1024m" "-Xmx2048m" "-Djava.library.path=libswt\win64;/bin" "-Djava.endorsed.dirs=C:\Program Files\Java\jdk1.8.0_131\jre\lib\endorsed;C:\Program Files\Java\jdk1.8.0_131\lib\endorsed;E:\app\data-integration\system\karaf\lib\endorsed"  "-DKETTLE_HOME=" "-DKETTLE_REPOSITORY=" "-DKETTLE_USER=" "-DKETTLE_PASSWORD=" "-DKETTLE_PLUGIN_PACKAGES=" "-DKETTLE_LOG_SIZE_LIMIT=" "-DKETTLE_JNDI_ROOT=" -jar launcher\launcher.jar -lib ..\libswt\win64  -main org.pentaho.di.pan.Pan -initialDir "E:\LocalD_JC\07.GestionBaseDatos\01.Clase28092022\04.ValoracionIndividual_M2"\ -file:ETL_M2.ktr 
+21:01:57,785 INFO  [KarafBoot] Checking to see if org.pentaho.clean.karaf.cache is enabled
+21:02:04,001 INFO  [KarafInstance] 
+*******************************************************************************
+*** Karaf Instance Number: 2 at E:\app\data-integration\.\system\karaf\cach ***
+***   es\pan\data-1                                                         ***
+*** Karaf Port:8803                                                         ***
+*** OSGI Service Port:9052                                                  ***
+*******************************************************************************
+21:02:14,026 ERROR [FeaturesServiceImpl] Error notifying listener about the current state
+java.lang.RuntimeException: Error resolving artifact org.apache.cxf.karaf:apache-cxf:xml:features:3.3.1: [Could not transfer artifact org.apache.cxf.karaf:apache-cxf:xml:features:3.3.1 from/to karaf-system (file:D:/app/data-integration/system/karaf/system/): D:\app\data-integration\system\karaf\system\org\apache\cxf\karaf\apache-cxf\3.3.1\apache-cxf-3.3.1-features.xml.part.lock (El sistema no puede encontrar la ruta especificada)] : mvn:org.apache.cxf.karaf/apache-cxf/3.3.1/xml/features
+	at org.apache.karaf.features.internal.service.RepositoryImpl.load(RepositoryImpl.java:116) ~[!/:?]
+	at org.apache.karaf.features.internal.service.RepositoryImpl.<init>(RepositoryImpl.java:50) ~[!/:?]
+	at org.apache.karaf.features.internal.service.RepositoryCacheImpl.create(RepositoryCacheImpl.java:51) ~[!/:?]
+	at org.apache.karaf.features.internal.service.FeaturesServiceImpl.registerListener(FeaturesServiceImpl.java:273) [!/:?]
+	at org.apache.karaf.features.internal.osgi.Activator.doStart(Activator.java:176) [!/:?]
+	at org.apache.karaf.util.tracker.BaseActivator.run(BaseActivator.java:312) [!/:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [?:1.8.0_131]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [?:1.8.0_131]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [?:1.8.0_131]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [?:1.8.0_131]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_131]
+Caused by: java.io.IOException: Error resolving artifact org.apache.cxf.karaf:apache-cxf:xml:features:3.3.1: [Could not transfer artifact org.apache.cxf.karaf:apache-cxf:xml:features:3.3.1 from/to karaf-system (file:D:/app/data-integration/system/karaf/system/): D:\app\data-integration\system\karaf\system\org\apache\cxf\karaf\apache-cxf\3.3.1\apache-cxf-3.3.1-features.xml.part.lock (El sistema no puede encontrar la ruta especificada)]
+	at org.ops4j.pax.url.mvn.internal.AetherBasedResolver.configureIOException(AetherBasedResolver.java:803) ~[?:?]
+	at org.ops4j.pax.url.mvn.internal.AetherBasedResolver.resolve(AetherBasedResolver.java:774) ~[?:?]
+	at org.ops4j.pax.url.mvn.internal.AetherBasedResolver.resolve(AetherBasedResolver.java:657) ~[?:?]
+	at org.ops4j.pax.url.mvn.internal.AetherBasedResolver.resolve(AetherBasedResolver.java:598) ~[?:?]
+	at org.ops4j.pax.url.mvn.internal.AetherBasedResolver.resolve(AetherBasedResolver.java:565) ~[?:?]
+	at org.ops4j.pax.url.mvn.internal.AetherBasedResolver.resolve(AetherBasedResolver.java:555) ~[?:?]
+	at org.ops4j.pax.url.mvn.internal.Connection.getInputStream(Connection.java:123) ~[?:?]
+	at java.net.URL.openStream(URL.java:1045) ~[?:1.8.0_131]
+	at org.apache.karaf.features.internal.service.RepositoryImpl.load(RepositoryImpl.java:113) ~[!/:?]
+	... 10 more
+	Suppressed: shaded.org.eclipse.aether.transfer.ArtifactTransferException: Could not transfer artifact org.apache.cxf.karaf:apache-cxf:xml:features:3.3.1 from/to karaf-system (file:D:/app/data-integration/system/karaf/system/): D:\app\data-integration\system\karaf\system\org\apache\cxf\karaf\apache-cxf\3.3.1\apache-cxf-3.3.1-features.xml.part.lock (El sistema no puede encontrar la ruta especificada)
+		at shaded.org.eclipse.aether.connector.basic.ArtifactTransportListener.transferFailed(ArtifactTransportListener.java:52) ~[?:?]
+		at shaded.org.eclipse.aether.connector.basic.BasicRepositoryConnector$TaskRunner.run(BasicRepositoryConnector.java:368) ~[?:?]
+		at shaded.org.eclipse.aether.util.concurrency.RunnableErrorForwarder$1.run(RunnableErrorForwarder.java:75) ~[?:?]
+		at shaded.org.eclipse.aether.connector.basic.BasicRepositoryConnector$DirectExecutor.execute(BasicRepositoryConnector.java:642) ~[?:?]
+		at shaded.org.eclipse.aether.connector.basic.BasicRepositoryConnector.get(BasicRepositoryConnector.java:262) ~[?:?]
+		at shaded.org.eclipse.aether.internal.impl.DefaultArtifactResolver.performDownloads(DefaultArtifactResolver.java:489) ~[?:?]
+		at shaded.org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolve(DefaultArtifactResolver.java:390) ~[?:?]
+		at shaded.org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifacts(DefaultArtifactResolver.java:215) ~[?:?]
+		at shaded.org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifact(DefaultArtifactResolver.java:192) ~[?:?]
+		at shaded.org.eclipse.aether.internal.impl.DefaultRepositorySystem.resolveArtifact(DefaultRepositorySystem.java:247) ~[?:?]
+		at org.ops4j.pax.url.mvn.internal.AetherBasedResolver.resolve(AetherBasedResolver.java:767) ~[?:?]
+		at org.ops4j.pax.url.mvn.internal.AetherBasedResolver.resolve(AetherBasedResolver.java:657) ~[?:?]
+		at org.ops4j.pax.url.mvn.internal.AetherBasedResolver.resolve(AetherBasedResolver.java:598) ~[?:?]
+		at org.ops4j.pax.url.mvn.internal.AetherBasedResolver.resolve(AetherBasedResolver.java:565) ~[?:?]
+		at org.ops4j.pax.url.mvn.internal.AetherBasedResolver.resolve(AetherBasedResolver.java:555) ~[?:?]
+		at org.ops4j.pax.url.mvn.internal.Connection.getInputStream(Connection.java:123) ~[?:?]
+		at java.net.URL.openStream(URL.java:1045) ~[?:1.8.0_131]
+		at org.apache.karaf.features.internal.service.RepositoryImpl.load(RepositoryImpl.java:113) ~[!/:?]
+		at org.apache.karaf.features.internal.service.RepositoryImpl.<init>(RepositoryImpl.java:50) ~[!/:?]
+		at org.apache.karaf.features.internal.service.RepositoryCacheImpl.create(RepositoryCacheImpl.java:51) ~[!/:?]
+		at org.apache.karaf.features.internal.service.FeaturesServiceImpl.registerListener(FeaturesServiceImpl.java:273) [!/:?]
+		at org.apache.karaf.features.internal.osgi.Activator.doStart(Activator.java:176) [!/:?]
+		at org.apache.karaf.util.tracker.BaseActivator.run(BaseActivator.java:312) [!/:?]
+		at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [?:1.8.0_131]
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266) [?:1.8.0_131]
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [?:1.8.0_131]
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [?:1.8.0_131]
+		at java.lang.Thread.run(Thread.java:748) [?:1.8.0_131]
+	Caused by: java.io.FileNotFoundException: D:\app\data-integration\system\karaf\system\org\apache\cxf\karaf\apache-cxf\3.3.1\apache-cxf-3.3.1-features.xml.part.lock (El sistema no puede encontrar la ruta especificada)
+		at java.io.RandomAccessFile.open0(Native Method) ~[?:1.8.0_131]
+		at java.io.RandomAccessFile.open(RandomAccessFile.java:316) ~[?:1.8.0_131]
+		at java.io.RandomAccessFile.<init>(RandomAccessFile.java:243) ~[?:1.8.0_131]
+		at shaded.org.eclipse.aether.connector.basic.PartialFile$LockFile.tryLock(PartialFile.java:138) ~[?:?]
+		at shaded.org.eclipse.aether.connector.basic.PartialFile$LockFile.lock(PartialFile.java:82) ~[?:?]
+		at shaded.org.eclipse.aether.connector.basic.PartialFile$LockFile.<init>(PartialFile.java:70) ~[?:?]
+		at shaded.org.eclipse.aether.connector.basic.PartialFile$Factory.newInstance(PartialFile.java:278) ~[?:?]
+		at shaded.org.eclipse.aether.connector.basic.BasicRepositoryConnector$GetTaskRunner.runTask(BasicRepositoryConnector.java:441) ~[?:?]
+		at shaded.org.eclipse.aether.connector.basic.BasicRepositoryConnector$TaskRunner.run(BasicRepositoryConnector.java:363) ~[?:?]
+		... 26 more
+Caused by: shaded.org.eclipse.aether.resolution.ArtifactResolutionException: Error resolving artifact org.apache.cxf.karaf:apache-cxf:xml:features:3.3.1
+	at shaded.org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolve(DefaultArtifactResolver.java:413) ~[?:?]
+	at shaded.org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifacts(DefaultArtifactResolver.java:215) ~[?:?]
+	at shaded.org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifact(DefaultArtifactResolver.java:192) ~[?:?]
+	at shaded.org.eclipse.aether.internal.impl.DefaultRepositorySystem.resolveArtifact(DefaultRepositorySystem.java:247) ~[?:?]
+	at org.ops4j.pax.url.mvn.internal.AetherBasedResolver.resolve(AetherBasedResolver.java:767) ~[?:?]
+	at org.ops4j.pax.url.mvn.internal.AetherBasedResolver.resolve(AetherBasedResolver.java:657) ~[?:?]
+	at org.ops4j.pax.url.mvn.internal.AetherBasedResolver.resolve(AetherBasedResolver.java:598) ~[?:?]
+	at org.ops4j.pax.url.mvn.internal.AetherBasedResolver.resolve(AetherBasedResolver.java:565) ~[?:?]
+	at org.ops4j.pax.url.mvn.internal.AetherBasedResolver.resolve(AetherBasedResolver.java:555) ~[?:?]
+	at org.ops4j.pax.url.mvn.internal.Connection.getInputStream(Connection.java:123) ~[?:?]
+	at java.net.URL.openStream(URL.java:1045) ~[?:1.8.0_131]
+	at org.apache.karaf.features.internal.service.RepositoryImpl.load(RepositoryImpl.java:113) ~[!/:?]
+	... 10 more
+21:02:19,309 ERROR [FeaturesServiceImpl] Error notifying listener about the current state
+java.lang.RuntimeException: Error resolving artifact org.apache.cxf.karaf:apache-cxf:xml:features:3.3.1: [Could not transfer artifact org.apache.cxf.karaf:apache-cxf:xml:features:3.3.1 from/to karaf-system (file:D:/app/data-integration/system/karaf/system/): D:\app\data-integration\system\karaf\system\org\apache\cxf\karaf\apache-cxf\3.3.1\apache-cxf-3.3.1-features.xml.part.lock (El sistema no puede encontrar la ruta especificada)] : mvn:org.apache.cxf.karaf/apache-cxf/3.3.1/xml/features
+	at org.apache.karaf.features.internal.service.RepositoryImpl.load(RepositoryImpl.java:116) ~[!/:?]
+	at org.apache.karaf.features.internal.service.RepositoryImpl.<init>(RepositoryImpl.java:50) ~[!/:?]
+	at org.apache.karaf.features.internal.service.RepositoryCacheImpl.create(RepositoryCacheImpl.java:51) ~[!/:?]
+	at org.apache.karaf.features.internal.service.FeaturesServiceImpl.registerListener(FeaturesServiceImpl.java:273) [!/:?]
+	at org.apache.karaf.features.internal.osgi.Activator$2.addingService(Activator.java:297) [!/:?]
+	at org.apache.karaf.features.internal.osgi.Activator$2.addingService(Activator.java:293) [!/:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:941) [org.osgi.core-6.0.0.jar:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:870) [org.osgi.core-6.0.0.jar:?]
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256) [org.osgi.core-6.0.0.jar:?]
+	at org.osgi.util.tracker.AbstractTracked.track(AbstractTracked.java:229) [org.osgi.core-6.0.0.jar:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.serviceChanged(ServiceTracker.java:901) [org.osgi.core-6.0.0.jar:?]
+	at org.apache.felix.framework.EventDispatcher.invokeServiceListenerCallback(EventDispatcher.java:990) [org.apache.felix.framework-5.6.12.jar:?]
+	at org.apache.felix.framework.EventDispatcher.fireEventImmediately(EventDispatcher.java:838) [org.apache.felix.framework-5.6.12.jar:?]
+	at org.apache.felix.framework.EventDispatcher.fireServiceEvent(EventDispatcher.java:545) [org.apache.felix.framework-5.6.12.jar:?]
+	at org.apache.felix.framework.Felix.fireServiceEvent(Felix.java:4595) [org.apache.felix.framework-5.6.12.jar:?]
+	at org.apache.felix.framework.Felix.registerService(Felix.java:3587) [org.apache.felix.framework-5.6.12.jar:?]
+	at org.apache.felix.framework.BundleContextImpl.registerService(BundleContextImpl.java:348) [org.apache.felix.framework-5.6.12.jar:?]
+	at org.apache.felix.framework.BundleContextImpl.registerService(BundleContextImpl.java:355) [org.apache.felix.framework-5.6.12.jar:?]
+	at org.pentaho.osgi.bridge.KarafCapabilityProvider.<init>(KarafCapabilityProvider.java:103) [!/:9.3.0.0-428]
+	at org.pentaho.osgi.bridge.activator.BridgeActivator.start(BridgeActivator.java:41) [!/:9.3.0.0-428]
+	at org.apache.felix.framework.util.SecureAction.startActivator(SecureAction.java:697) [org.apache.felix.framework-5.6.12.jar:?]
+	at org.apache.felix.framework.Felix.activateBundle(Felix.java:2240) [org.apache.felix.framework-5.6.12.jar:?]
+	at org.apache.felix.framework.Felix.startBundle(Felix.java:2146) [org.apache.felix.framework-5.6.12.jar:?]
+	at org.apache.felix.framework.Felix.setActiveStartLevel(Felix.java:1373) [org.apache.felix.framework-5.6.12.jar:?]
+	at org.apache.felix.framework.FrameworkStartLevelImpl.run(FrameworkStartLevelImpl.java:308) [org.apache.felix.framework-5.6.12.jar:?]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_131]
+Caused by: java.io.IOException: Error resolving artifact org.apache.cxf.karaf:apache-cxf:xml:features:3.3.1: [Could not transfer artifact org.apache.cxf.karaf:apache-cxf:xml:features:3.3.1 from/to karaf-system (file:D:/app/data-integration/system/karaf/system/): D:\app\data-integration\system\karaf\system\org\apache\cxf\karaf\apache-cxf\3.3.1\apache-cxf-3.3.1-features.xml.part.lock (El sistema no puede encontrar la ruta especificada)]
+	at org.ops4j.pax.url.mvn.internal.AetherBasedResolver.configureIOException(AetherBasedResolver.java:803) ~[?:?]
+	at org.ops4j.pax.url.mvn.internal.AetherBasedResolver.resolve(AetherBasedResolver.java:774) ~[?:?]
+	at org.ops4j.pax.url.mvn.internal.AetherBasedResolver.resolve(AetherBasedResolver.java:657) ~[?:?]
+	at org.ops4j.pax.url.mvn.internal.AetherBasedResolver.resolve(AetherBasedResolver.java:598) ~[?:?]
+	at org.ops4j.pax.url.mvn.internal.AetherBasedResolver.resolve(AetherBasedResolver.java:565) ~[?:?]
+	at org.ops4j.pax.url.mvn.internal.AetherBasedResolver.resolve(AetherBasedResolver.java:555) ~[?:?]
+	at org.ops4j.pax.url.mvn.internal.Connection.getInputStream(Connection.java:123) ~[?:?]
+	at java.net.URL.openStream(URL.java:1045) ~[?:1.8.0_131]
+	at org.apache.karaf.features.internal.service.RepositoryImpl.load(RepositoryImpl.java:113) ~[!/:?]
+	... 25 more
+	Suppressed: shaded.org.eclipse.aether.transfer.ArtifactTransferException: Could not transfer artifact org.apache.cxf.karaf:apache-cxf:xml:features:3.3.1 from/to karaf-system (file:D:/app/data-integration/system/karaf/system/): D:\app\data-integration\system\karaf\system\org\apache\cxf\karaf\apache-cxf\3.3.1\apache-cxf-3.3.1-features.xml.part.lock (El sistema no puede encontrar la ruta especificada)
+		at shaded.org.eclipse.aether.connector.basic.ArtifactTransportListener.transferFailed(ArtifactTransportListener.java:52) ~[?:?]
+		at shaded.org.eclipse.aether.connector.basic.BasicRepositoryConnector$TaskRunner.run(BasicRepositoryConnector.java:368) ~[?:?]
+		at shaded.org.eclipse.aether.util.concurrency.RunnableErrorForwarder$1.run(RunnableErrorForwarder.java:75) ~[?:?]
+		at shaded.org.eclipse.aether.connector.basic.BasicRepositoryConnector$DirectExecutor.execute(BasicRepositoryConnector.java:642) ~[?:?]
+		at shaded.org.eclipse.aether.connector.basic.BasicRepositoryConnector.get(BasicRepositoryConnector.java:262) ~[?:?]
+		at shaded.org.eclipse.aether.internal.impl.DefaultArtifactResolver.performDownloads(DefaultArtifactResolver.java:489) ~[?:?]
+		at shaded.org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolve(DefaultArtifactResolver.java:390) ~[?:?]
+		at shaded.org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifacts(DefaultArtifactResolver.java:215) ~[?:?]
+		at shaded.org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifact(DefaultArtifactResolver.java:192) ~[?:?]
+		at shaded.org.eclipse.aether.internal.impl.DefaultRepositorySystem.resolveArtifact(DefaultRepositorySystem.java:247) ~[?:?]
+		at org.ops4j.pax.url.mvn.internal.AetherBasedResolver.resolve(AetherBasedResolver.java:767) ~[?:?]
+		at org.ops4j.pax.url.mvn.internal.AetherBasedResolver.resolve(AetherBasedResolver.java:657) ~[?:?]
+		at org.ops4j.pax.url.mvn.internal.AetherBasedResolver.resolve(AetherBasedResolver.java:598) ~[?:?]
+		at org.ops4j.pax.url.mvn.internal.AetherBasedResolver.resolve(AetherBasedResolver.java:565) ~[?:?]
+		at org.ops4j.pax.url.mvn.internal.AetherBasedResolver.resolve(AetherBasedResolver.java:555) ~[?:?]
+		at org.ops4j.pax.url.mvn.internal.Connection.getInputStream(Connection.java:123) ~[?:?]
+		at java.net.URL.openStream(URL.java:1045) ~[?:1.8.0_131]
+		at org.apache.karaf.features.internal.service.RepositoryImpl.load(RepositoryImpl.java:113) ~[!/:?]
+		at org.apache.karaf.features.internal.service.RepositoryImpl.<init>(RepositoryImpl.java:50) ~[!/:?]
+		at org.apache.karaf.features.internal.service.RepositoryCacheImpl.create(RepositoryCacheImpl.java:51) ~[!/:?]
+		at org.apache.karaf.features.internal.service.FeaturesServiceImpl.registerListener(FeaturesServiceImpl.java:273) [!/:?]
+		at org.apache.karaf.features.internal.osgi.Activator$2.addingService(Activator.java:297) [!/:?]
+		at org.apache.karaf.features.internal.osgi.Activator$2.addingService(Activator.java:293) [!/:?]
+		at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:941) [org.osgi.core-6.0.0.jar:?]
+		at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:870) [org.osgi.core-6.0.0.jar:?]
+		at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256) [org.osgi.core-6.0.0.jar:?]
+		at org.osgi.util.tracker.AbstractTracked.track(AbstractTracked.java:229) [org.osgi.core-6.0.0.jar:?]
+		at org.osgi.util.tracker.ServiceTracker$Tracked.serviceChanged(ServiceTracker.java:901) [org.osgi.core-6.0.0.jar:?]
+		at org.apache.felix.framework.EventDispatcher.invokeServiceListenerCallback(EventDispatcher.java:990) [org.apache.felix.framework-5.6.12.jar:?]
+		at org.apache.felix.framework.EventDispatcher.fireEventImmediately(EventDispatcher.java:838) [org.apache.felix.framework-5.6.12.jar:?]
+		at org.apache.felix.framework.EventDispatcher.fireServiceEvent(EventDispatcher.java:545) [org.apache.felix.framework-5.6.12.jar:?]
+		at org.apache.felix.framework.Felix.fireServiceEvent(Felix.java:4595) [org.apache.felix.framework-5.6.12.jar:?]
+		at org.apache.felix.framework.Felix.registerService(Felix.java:3587) [org.apache.felix.framework-5.6.12.jar:?]
+		at org.apache.felix.framework.BundleContextImpl.registerService(BundleContextImpl.java:348) [org.apache.felix.framework-5.6.12.jar:?]
+		at org.apache.felix.framework.BundleContextImpl.registerService(BundleContextImpl.java:355) [org.apache.felix.framework-5.6.12.jar:?]
+		at org.pentaho.osgi.bridge.KarafCapabilityProvider.<init>(KarafCapabilityProvider.java:103) [!/:9.3.0.0-428]
+		at org.pentaho.osgi.bridge.activator.BridgeActivator.start(BridgeActivator.java:41) [!/:9.3.0.0-428]
+		at org.apache.felix.framework.util.SecureAction.startActivator(SecureAction.java:697) [org.apache.felix.framework-5.6.12.jar:?]
+		at org.apache.felix.framework.Felix.activateBundle(Felix.java:2240) [org.apache.felix.framework-5.6.12.jar:?]
+		at org.apache.felix.framework.Felix.startBundle(Felix.java:2146) [org.apache.felix.framework-5.6.12.jar:?]
+		at org.apache.felix.framework.Felix.setActiveStartLevel(Felix.java:1373) [org.apache.felix.framework-5.6.12.jar:?]
+		at org.apache.felix.framework.FrameworkStartLevelImpl.run(FrameworkStartLevelImpl.java:308) [org.apache.felix.framework-5.6.12.jar:?]
+		at java.lang.Thread.run(Thread.java:748) [?:1.8.0_131]
+	Caused by: java.io.FileNotFoundException: D:\app\data-integration\system\karaf\system\org\apache\cxf\karaf\apache-cxf\3.3.1\apache-cxf-3.3.1-features.xml.part.lock (El sistema no puede encontrar la ruta especificada)
+		at java.io.RandomAccessFile.open0(Native Method) ~[?:1.8.0_131]
+		at java.io.RandomAccessFile.open(RandomAccessFile.java:316) ~[?:1.8.0_131]
+		at java.io.RandomAccessFile.<init>(RandomAccessFile.java:243) ~[?:1.8.0_131]
+		at shaded.org.eclipse.aether.connector.basic.PartialFile$LockFile.tryLock(PartialFile.java:138) ~[?:?]
+		at shaded.org.eclipse.aether.connector.basic.PartialFile$LockFile.lock(PartialFile.java:82) ~[?:?]
+		at shaded.org.eclipse.aether.connector.basic.PartialFile$LockFile.<init>(PartialFile.java:70) ~[?:?]
+		at shaded.org.eclipse.aether.connector.basic.PartialFile$Factory.newInstance(PartialFile.java:278) ~[?:?]
+		at shaded.org.eclipse.aether.connector.basic.BasicRepositoryConnector$GetTaskRunner.runTask(BasicRepositoryConnector.java:441) ~[?:?]
+		at shaded.org.eclipse.aether.connector.basic.BasicRepositoryConnector$TaskRunner.run(BasicRepositoryConnector.java:363) ~[?:?]
+		... 41 more
+Caused by: shaded.org.eclipse.aether.resolution.ArtifactResolutionException: Error resolving artifact org.apache.cxf.karaf:apache-cxf:xml:features:3.3.1
+	at shaded.org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolve(DefaultArtifactResolver.java:413) ~[?:?]
+	at shaded.org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifacts(DefaultArtifactResolver.java:215) ~[?:?]
+	at shaded.org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifact(DefaultArtifactResolver.java:192) ~[?:?]
+	at shaded.org.eclipse.aether.internal.impl.DefaultRepositorySystem.resolveArtifact(DefaultRepositorySystem.java:247) ~[?:?]
+	at org.ops4j.pax.url.mvn.internal.AetherBasedResolver.resolve(AetherBasedResolver.java:767) ~[?:?]
+	at org.ops4j.pax.url.mvn.internal.AetherBasedResolver.resolve(AetherBasedResolver.java:657) ~[?:?]
+	at org.ops4j.pax.url.mvn.internal.AetherBasedResolver.resolve(AetherBasedResolver.java:598) ~[?:?]
+	at org.ops4j.pax.url.mvn.internal.AetherBasedResolver.resolve(AetherBasedResolver.java:565) ~[?:?]
+	at org.ops4j.pax.url.mvn.internal.AetherBasedResolver.resolve(AetherBasedResolver.java:555) ~[?:?]
+	at org.ops4j.pax.url.mvn.internal.Connection.getInputStream(Connection.java:123) ~[?:?]
+	at java.net.URL.openStream(URL.java:1045) ~[?:1.8.0_131]
+	at org.apache.karaf.features.internal.service.RepositoryImpl.load(RepositoryImpl.java:113) ~[!/:?]
+	... 25 more
+21:02:19,570 ERROR [KarafCapabilityProvider] No feature found matching id: pentaho-client
+21:02:19,570 ERROR [KarafCapabilityProvider] No feature found matching id: pentaho-metaverse
+21:02:19,570 ERROR [KarafCapabilityProvider] No feature found matching id: pentaho-dataservice
+21:02:19,570 ERROR [KarafCapabilityProvider] No feature found matching id: pdi-data-refinery
+21:02:19,570 ERROR [KarafCapabilityProvider] No feature found matching id: pdi-marketplace
+21:02:19,570 ERROR [KarafCapabilityProvider] No feature found matching id: pentaho-hadoop-shims-apache-kar
+21:02:19,571 INFO  [DriverManager] Installing driver kars.
+21:02:19,572 INFO  [DriverManager] 0 drivers will be installed.
+21:02:19,573 INFO  [DriverManager] Finished installing drivers kars.
+2022/10/26 21:02:22 - Pan - Start of run.
+2022/10/26 21:02:22 - ETL_M2 - Dispatching started for transformation [ETL_M2]
+2022/10/26 21:02:22 - XML output 1.0 - Opening output stream in encoding: UTF-8
+2022/10/26 21:02:22 - XML output 2 2 2.0 - Opening output stream in encoding: UTF-8
+2022/10/26 21:02:22 - Table OutPut countryflagresult.0 - Connected to database [docker Oracle] (commit=1000)
+2022/10/26 21:02:22 - Generate Rows CountryISOCode 2 3.0 - Finished processing (I=0, O=0, R=0, W=1, U=0, E=0)
+2022/10/26 21:02:22 - Generate Rows CountryISOCode.0 - Finished processing (I=0, O=0, R=0, W=1, U=0, E=0)
+2022/10/26 21:02:23 - Table paises01.0 - Finished reading query, closing connection
+2022/10/26 21:02:23 - Table Cuenta.0 - Finished reading query, closing connection
+2022/10/26 21:02:23 - Table paises01.0 - Finished processing (I=10, O=0, R=0, W=10, U=0, E=0)
+2022/10/26 21:02:23 - Table Cuenta.0 - Finished processing (I=10, O=0, R=0, W=10, U=0, E=0)
+2022/10/26 21:02:24 - WS - Flag for a Country 2.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2022/10/26 21:02:24 - WS - Captial City for a Country.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2022/10/26 21:02:24 - XML output 1.0 - Finished processing (I=0, O=1, R=1, W=1, U=0, E=0)
+2022/10/26 21:02:24 - Table OutPut countryflagresult.0 - Finished processing (I=0, O=1, R=1, W=1, U=0, E=0)
+2022/10/26 21:02:26 - WS - International Phone Code for a Country Copy.0 - Finished processing (I=0, O=0, R=10, W=10, U=0, E=0)
+2022/10/26 21:02:26 - WS - Multiply.0 - Finished processing (I=0, O=0, R=10, W=10, U=0, E=0)
+2022/10/26 21:02:26 - XML output 2 2 2.0 - Finished processing (I=0, O=10, R=10, W=10, U=0, E=0)
+2022/10/26 21:02:26 - JSON output.0 - Finished processing (I=0, O=10, R=10, W=10, U=0, E=0)
+2022/10/26 21:02:26 - Carte - Installing timer to purge stale objects after 1440 minutes.
+2022/10/26 21:02:26 - Pan - Finished!
+2022/10/26 21:02:26 - Pan - Start=2022/10/26 21:02:22.443, Stop=2022/10/26 21:02:26.769
+2022/10/26 21:02:26 - Pan - Processing ended after 4 seconds.
+2022/10/26 21:02:26 - ETL_M2 -  
+2022/10/26 21:02:26 - ETL_M2 - Step WS - Captial City for a Country.0 ended successfully, processed 1 lines. ( 0 lines/s)
+2022/10/26 21:02:26 - ETL_M2 - Step XML output 1.0 ended successfully, processed 1 lines. ( 0 lines/s)
+2022/10/26 21:02:26 - ETL_M2 - Step Generate Rows CountryISOCode.0 ended successfully, processed 1 lines. ( 0 lines/s)
+2022/10/26 21:02:26 - ETL_M2 - Step WS - International Phone Code for a Country Copy.0 ended successfully, processed 10 lines. ( 2 lines/s)
+2022/10/26 21:02:26 - ETL_M2 - Step XML output 2 2 2.0 ended successfully, processed 10 lines. ( 2 lines/s)
+2022/10/26 21:02:26 - ETL_M2 - Step Generate Rows CountryISOCode 2 3.0 ended successfully, processed 1 lines. ( 0 lines/s)
+2022/10/26 21:02:26 - ETL_M2 - Step WS - Flag for a Country 2.0 ended successfully, processed 1 lines. ( 0 lines/s)
+2022/10/26 21:02:26 - ETL_M2 - Step Table OutPut countryflagresult.0 ended successfully, processed 1 lines. ( 0 lines/s)
+2022/10/26 21:02:26 - ETL_M2 - Step Table paises01.0 ended successfully, processed 10 lines. ( 2 lines/s)
+2022/10/26 21:02:26 - ETL_M2 - Step Table Cuenta.0 ended successfully, processed 10 lines. ( 2 lines/s)
+2022/10/26 21:02:26 - ETL_M2 - Step WS - Multiply.0 ended successfully, processed 10 lines. ( 2 lines/s)
+2022/10/26 21:02:26 - ETL_M2 - Step JSON output.0 ended successfully, processed 10 lines. ( 2 lines/s)
