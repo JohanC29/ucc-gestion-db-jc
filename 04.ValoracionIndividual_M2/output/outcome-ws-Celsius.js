@@ -1,0 +1,1 @@
+{"data":[{"MultiplyResult":1},{"MultiplyResult":2},{"MultiplyResult":3},{"MultiplyResult":8},{"MultiplyResult":15},{"MultiplyResult":12},{"MultiplyResult":7},{"MultiplyResult":24},{"MultiplyResult":27},{"MultiplyResult":10}]}
